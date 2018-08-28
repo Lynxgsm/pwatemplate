@@ -9,21 +9,44 @@ import {
   MatButtonModule,
   MatCardModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatMenuModule,
+  MatListModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatTabsModule,
+  MatTableModule
 } from '@angular/material';
 
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './layouts/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    NavigationComponent
+  ],
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     }),
     BrowserAnimationsModule,
+    AppRoutingModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatMenuModule,
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
